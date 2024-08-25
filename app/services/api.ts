@@ -19,5 +19,13 @@ export const getItemById = async (id: string) => {
     throw new Error(`Failed to fetch: ${response.statusText}`);
   }
 
-  return response.json();
+  const data = await response.json();
+
+  if (!data.item) {
+    throw new Error(
+      `Incomplete data received from API for item with ID: ${id}`
+    );
+  }
+
+  return data;
 };
