@@ -1,0 +1,29 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.product-card,
+.product-detail {
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+}
+
+.product-card img,
+.product-detail img {
+  max-width: 100%;
+  height: auto;
+}
