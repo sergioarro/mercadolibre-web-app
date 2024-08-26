@@ -1,0 +1,27 @@
+/* styles/Header.module.css */
+.header {
+  width: 100%;
+  background-color: #fff159;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.container {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centramos los elementos */
+}
+
+.logo {
+  margin-right: 10px; /* Un pequeño margen entre el logo y la caja de búsqueda */
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  width: 100%; /* Hacemos que la caja de búsqueda ocupe todo el espacio restante */
+  max-width: 600px; /* Pero limitamos su máximo ancho */
+}

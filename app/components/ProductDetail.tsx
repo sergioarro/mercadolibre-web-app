@@ -31,16 +31,20 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ item }) => {
   }
 
   return (
-    <div className="product-detail">
+    <div className="product-detail container">
       <img src={picture} alt={title} />
-      <div className="product-info">
+      <div className="product-info-detail">
         <h1>{title}</h1>
-        <p>
+        <p className="price">
           {price.currency} {price.amount}.{price.decimals}
         </p>
-        <p>{condition}</p>
-        {soldQuantity !== undefined && <p>Sold Quantity: {soldQuantity}</p>}
-        {freeShipping && <p>Free Shipping</p>}
+        <p className="condition">{condition}</p>
+        {soldQuantity !== undefined && (
+          <p className="soldQuantity">Cantidad vendida: {soldQuantity}</p>
+        )}
+        {freeShipping && <p>Envío gratis</p>}
+        <button className="buyButton">Comprar</button>
+        <h2>Descripción del producto</h2>
         <p>{description}</p>
       </div>
     </div>

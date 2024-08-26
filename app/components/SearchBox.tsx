@@ -1,7 +1,9 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import styles from "@/styles/SearchBox.module.css";
 
 const SearchBox = () => {
   const [query, setQuery] = useState("");
@@ -15,16 +17,20 @@ const SearchBox = () => {
   };
 
   return (
-    <form onSubmit={handleSearch} className="search-box">
+    <form onSubmit={handleSearch} className={styles.searchBox}>
       <input
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        placeholder="Search products..."
-        className="search-input"
+        placeholder="Nunca dejes de buscar"
+        className={styles.searchInput}
       />
-      <button type="submit" className="search-button">
-        Search
+      <button type="submit" className={styles.searchButton}>
+        <img
+          src="/search.png"
+          alt="Buscar en Mercadolibre"
+          className={styles.searchIcon}
+        />
       </button>
     </form>
   );

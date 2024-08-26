@@ -24,8 +24,7 @@ const SearchPage = () => {
   }, [query]);
 
   return (
-    <div>
-      <h1>Search Results</h1>
+    <div className="container">
       <div className="product-list">
         {items.map((item) => (
           <ProductCard key={item.id} {...item} />
